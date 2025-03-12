@@ -1,144 +1,91 @@
-# z3r0x - Multi-URL Checker
+z3r0x - Multi-URL Checker
+Python
+License
 
-![Python](https://img.shields.io/badge/Python-3.6%2B-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+z3r0x is a lightweight Python-based tool designed to check the accessibility of multiple URLs. It verifies whether a given list of URLs is accessible or broken and provides a clear output with visual indicators (✅ for accessible, ❌ for broken). It’s perfect for developers, system administrators, and anyone who needs to monitor the status of multiple websites or endpoints.
 
-**z3r0x** is a lightweight Python-based tool designed to check the accessibility of multiple URLs. It verifies whether a given list of URLs is accessible or broken and provides a clear output with visual indicators (✅ for accessible, ❌ for broken). It’s perfect for developers, system administrators, and anyone who needs to monitor the status of multiple websites or endpoints.
+Features
+Multi-URL Support: Check the accessibility of multiple URLs in one go.
 
----
+Visual Indicators: Green tick (✅) for accessible URLs and red cross (❌) for broken URLs.
 
-## Features
+Simple and Lightweight: Easy to use with minimal dependencies.
 
-- **Multi-URL Support**: Check the accessibility of multiple URLs in one go.
-- **Visual Indicators**: Green tick (✅) for accessible URLs and red cross (❌) for broken URLs.
-- **Simple and Lightweight**: Easy to use with minimal dependencies.
-- **Customizable**: Add or remove URLs from the list as needed.
-- **Fast and Efficient**: Uses Python's `requests` library for quick HTTP requests.
+Customizable: Add or remove URLs from the list as needed.
 
----
+Fast and Efficient: Uses Python's requests library for quick HTTP requests.
 
-## Installation
+Documentation: Detailed documentation is available on GitBook.
 
-### Prerequisites
+Installation
+Prerequisites
+Python 3.6 or higher.
 
-- Python 3.6 or higher.
-- `requests` library (installed automatically if not present).
+requests library (installed automatically if not present).
 
-### Steps
+Steps
+Clone the repository:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/z3r0x.git
-   cd z3r0x
-   ```
+bash
+Copy
+git clone https://github.com/silentfort/z3r0x.git
+cd z3r0x
+Install the required dependencies:
 
-2. Install the required dependencies:
-   ```bash
-   pip install requests
-   ```
+bash
+Copy
+pip install requests
+Run the script:
 
-3. Run the script:
-   ```bash
-   python z3r0x.py
-   ```
+bash
+Copy
+python z3r0x.py
+Usage
+Add the URLs you want to check in the site_urls list inside the z3r0x.py file:
 
----
-
-## Usage
-
-1. Add the URLs you want to check in the `site_urls` list inside the `z3r0x.py` file:
-   ```python
-   site_urls = [
-       "https://www.google.com",
-       "https://www.example.com",
-       "https://www.nonexistentwebsite123.com",
-       "https://www.github.com"
-   ]
-   ```
-
-2. Run the script:
-   ```bash
-   python z3r0x.py
-   ```
-
-3. View the output:
-   ```
-   OK https://www.google.com ✅
-   OK https://www.example.com ✅
-   BROKEN https://www.nonexistentwebsite123.com ❌
-   OK https://www.github.com ✅
-   ```
-
----
-
-## Example
-
-Here’s an example of how to use **z3r0x**:
-
-```python
-# z3r0x.py
-
-import requests
-
-def check_site_accessibility(url):
-    try:
-        response = requests.get(url, timeout=5)
-        if response.status_code == 200:
-            print(f"OK {url} ✅")
-        else:
-            print(f"BROKEN {url} ❌")
-    except requests.RequestException:
-        print(f"BROKEN {url} ❌")
-
-# List of URLs to check
+python
+Copy
 site_urls = [
     "https://www.google.com",
     "https://www.example.com",
     "https://www.nonexistentwebsite123.com",
     "https://www.github.com"
 ]
+Run the script:
 
-# Check accessibility of each URL
-for url in site_urls:
-    check_site_accessibility(url)
-```
+bash
+Copy
+python z3r0x.py
+View the output:
 
----
+Copy
+OK https://www.google.com ✅
+OK https://www.example.com ✅
+BROKEN https://www.nonexistentwebsite123.com ❌
+OK https://www.github.com ✅
+Documentation
+For detailed documentation, including advanced usage, configuration options, and troubleshooting, visit the z3r0x Documentation.
 
-## Contributing
+Contributing
+Contributions are welcome! If you’d like to contribute to z3r0x, please follow these steps:
 
-Contributions are welcome! If you’d like to contribute to **z3r0x**, please follow these steps:
+Fork the repository.
 
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Commit your changes.
-4. Push your branch and submit a pull request.
+Create a new branch for your feature or bugfix.
 
----
+Commit your changes.
 
-## License
+Push your branch and submit a pull request.
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
----
+Support
+If you encounter any issues or have questions, feel free to open an issue on the GitHub repository.
 
-## Support
+Acknowledgments
+Thanks to the Python community for creating amazing tools and libraries.
 
-If you encounter any issues or have questions, feel free to open an issue on the [GitHub repository](https://github.com/your-username/z3r0x/issues).
+Special thanks to the requests library for making HTTP requests simple and efficient.
 
----
-
-## Author
-
-**z3r0x** is developed and maintained by [Your Name](https://github.com/your-username).
-
----
-
-## Acknowledgments
-
-- Thanks to the Python community for creating amazing tools and libraries.
-- Special thanks to the `requests` library for making HTTP requests simple and efficient.
-
----
-
-Enjoy using **z3r0x**! 🚀
+Enjoy using z3r0x! 🚀
