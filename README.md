@@ -1,7 +1,3 @@
-Got it! I’ll update the **GitHub README.md** file to include your **GitBook documentation link** and other relevant details. Here’s the updated version of your `README.md`:
-
----
-
 # z3r0x - Multi-URL Checker
 
 ![Python](https://img.shields.io/badge/Python-3.6%2B-blue)
